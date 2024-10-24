@@ -1,0 +1,25 @@
+ai_assistant/
+│
+├── emotion_recognition/    # Módulo de reconocimiento de emociones
+│   ├── model/              # Modelos preentrenados o personalizados
+|   |   ├── emotion_model.py        # Código del modelo de emociones
+|   |   ├── train_model.py          # Código de entrenamiento
+|   |   ├── preprocess.py           # Código para preprocesar las imágenes
+|   |   └── emotion_recognition_model.h5  # El modelo preentrenado (se guardará después de entrenar)
+│   ├── data/               # Dataset de entrenamiento para las emociones
+│   ├── preprocess.py       # Código de preprocesamiento de imágenes
+│   ├── train.py            # Código para el entrenamiento del modelo
+│   └── emotion_detector.py # Código para el reconocimiento en tiempo real
+│
+├── assistant_logic/        # Módulo de interacción del asistente virtual
+│   ├── response_generator.py # Código que genera respuestas basadas en el estado de ánimo
+│   └── interaction_flow.py  # Lógica para decidir cómo interactuar con el usuario
+│
+├── gui/                    # Interfaz gráfica de usuario (GUI)
+│   ├── main_window.py      # Ventana principal de la interfaz gráfica
+│   └── assets/             # Imágenes, iconos u otros recursos para la GUI
+│
+├── utils/                  # Utilidades y helpers
+│   └── helpers.py          # Funciones comunes o auxiliares
+│
+└── main.py                 # Punto de entrada para ejecutar el asistente completo
