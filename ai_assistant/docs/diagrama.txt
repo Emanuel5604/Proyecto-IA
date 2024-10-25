@@ -7,8 +7,6 @@ ai_assistant/
 |   |   ├── preprocess.py           # Código para preprocesar las imágenes
 |   |   └── emotion_recognition_model.h5  # El modelo preentrenado (se guardará después de entrenar)
 │   ├── data/               # Dataset de entrenamiento para las emociones
-│   ├── preprocess.py       # Código de preprocesamiento de imágenes
-│   ├── train.py            # Código para el entrenamiento del modelo
 │   └── emotion_detector.py # Código para el reconocimiento en tiempo real
 │
 ├── assistant_logic/        # Módulo de interacción del asistente virtual

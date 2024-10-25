@@ -3,7 +3,7 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator  # type: ign
 from emotion_model import build_emotion_model
 
 # Definir rutas
-dataset_dir = '/path/to/your/dataset'
+dataset_dir = '/Proyecto-IA/emotion_recognition/data'
 model_save_path = 'emotion_recognition_model.h5'
 
 # Configurar los generadores de datos con aumentación y validación
