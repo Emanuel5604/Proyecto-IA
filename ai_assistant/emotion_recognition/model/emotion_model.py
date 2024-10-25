@@ -1,5 +1,5 @@
-from tensorflow.keras.applications import VGG16
-from tensorflow.keras import layers, models
+from tensorflow.keras.applications import VGG16  # type: ignore
+from tensorflow.keras import layers, models  # type: ignore
 
 
 def build_emotion_model(input_shape=(224, 224, 3), num_classes=7):
