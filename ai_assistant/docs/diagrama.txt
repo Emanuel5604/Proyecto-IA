@@ -25,9 +25,20 @@ ai_assistant/
 │   |   
 │   └── emotion_detector.py            # Código para el reconocimiento en tiempo real
 │
-├── assistant_logic/                   # Módulo de interacción del asistente virtual
-│   ├── response_generator.py          # Código que genera respuestas basadas en el estado de ánimo
-│   └── interaction_flow.py            # Lógica para decidir cómo interactuar con el usuario
+├── assistant_logic/
+│   |
+|   ├── response_generator/                          # Generador de respuestas basadas en IA
+│   |   ├── language_model.py                        # Modelo PLN basado en redes neuronales
+│   |   ├── response_processor.py                    # Procesador de respuestas, ajusta el tono y complejidad
+│   |   └── response_selector.py                     # Selecciona la mejor respuesta en base al contexto y emoción
+│   |
+|   ├── dialog_manager/                              # Gestión de flujo y contexto de diálogo
+|   │   ├── context_manager.py                       # Administra el contexto y seguimiento de la conversación
+|   │   ├── emotion_handler.py                       # Ajusta el flujo de la conversación según el estado emocional
+|   │   ├── intent_recognizer.py                     # Reconoce la intención del usuario usando PLN
+|   │   └── dialog_flow.py                           # Flujo de diálogo basado en estado e intenciones
+|   │
+|   └── interaction_flow.py                          # Lógica de interacción completa del asistente
 │
 ├── gui/                               # Interfaz gráfica de usuario (GUI)
 │   ├── main_window.py                 # Ventana principal de la interfaz gráfica
