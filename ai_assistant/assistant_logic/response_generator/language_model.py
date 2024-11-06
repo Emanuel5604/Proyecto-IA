@@ -8,6 +8,7 @@ class LanguageModel:
         self.model = GPT2LMHeadModel.from_pretrained(model_name)
         self.tokenizer = GPT2Tokenizer.from_pretrained(model_name)
         self.max_length = max_length
+        # hola
 
     def generate_response(self, prompt, emotion=None, context=None):
         """
