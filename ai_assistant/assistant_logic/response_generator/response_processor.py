@@ -1,5 +1,5 @@
 import re
-from textblob import TextBlob
+from textblob import TextBlob  # type: ignore
 
 
 class ResponseProcessor:
