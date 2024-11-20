@@ -37,7 +37,7 @@ ai_assistant/
 │   │   │   │   └── tokenizer.json
 │   │   │   └── intent_model.pkl          # Modelo de intenciones basado en SVM
 │   │   ├── language_model.py             # Modelo de lenguaje basado en redes neuronales
-│   │   ├── response_generator.py         # Congunta todas elj fucniconamiento de todas las clases
+│   │   ├── response_generator.py         # Congunta todas elj funciconamiento de todas las clases
 │   │   ├── response_processor.py         # Procesador de respuestas, ajusta el tono y complejidad
 │   │   └── response_selector.py          # Selección de la mejor respuesta según el contexto y emoción
 │   │
