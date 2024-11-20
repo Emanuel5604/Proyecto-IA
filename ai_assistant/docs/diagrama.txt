@@ -2,49 +2,58 @@ ai_assistant/
 │
 ├── emotion_calculation/                  # Módulo de reconocimiento de emociones
 │   ├── model/                            # Modelos preentrenados o personalizados
-|   |   ├── emotion_model.py              # Código del modelo de emociones
-|   |   ├── train_model.py                # Código de entrenamiento
-|   |   ├── preprocess.py                 # Código para preprocesar las imágenes
-|   |   └── emotion_recognition_model.h5  # El modelo preentrenado (se guardará después de entrenar)
-|   |   
-│   ├── data/                          # Dataset de entrenamiento para las emociones
-|   |   
-|   ├── emotion_detection/             # Deteccion de emociones "manual"           
-|   │   ├── data_processing/
-|   │   |   ├── eyebrows/
-|   │   |   ├── eyes/
-|   │   |   ├── mouth/
-|   │   |   ├── nose/
-|   │   |   ├── data_processing.py
-|   │   |   ├── emotion_visualization.py
-|   │   |   ├── face_mesh.py
-|   │   |   └── feature_processor.py
-|   |   |
-|   │   ├── emotions_recognition/
-|   │   └── emotion_detection.py      
-│   |   
-│   └── emotion_detector.py            # Código para el reconocimiento en tiempo real
+│   │   ├── emotion_model.py              # Código del modelo de emociones
+│   │   ├── train_model.py                # Código de entrenamiento
+│   │   ├── preprocess.py                 # Código para preprocesar las imágenes
+│   │   └── emotion_recognition_model.h5  # El modelo preentrenado
+│   │
+│   ├── data/                             # Dataset de entrenamiento para las emociones
+│   │
+│   ├── emotion_detection/                # Detección de emociones manual
+│   │   ├── data_processing/
+│   │   │   ├── eyebrows/
+│   │   │   ├── eyes/
+│   │   │   ├── mouth/
+│   │   │   ├── nose/
+│   │   │   ├── data_processing.py
+│   │   │   ├── emotion_visualization.py
+│   │   │   ├── face_mesh.py
+│   │   │   └── feature_processor.py
+│   │   │
+│   │   ├── emotions_recognition/
+│   │   └── emotion_detection.py
+│   │
+│   └── emotion_detector.py               # Código para el reconocimiento en tiempo real
 │
-├── assistant_logic/
-│   |
-|   ├── response_generator/                          # Generador de respuestas basadas en IA
-│   |   ├── language_model.py                        # Modelo PLN basado en redes neuronales
-│   |   ├── response_processor.py                    # Procesador de respuestas, ajusta el tono y complejidad
-│   |   └── response_selector.py                     # Selecciona la mejor respuesta en base al contexto y emoción
-│   |
-|   ├── dialog_manager/                              # Gestión de flujo y contexto de diálogo
-|   │   ├── context_manager.py                       # Administra el contexto y seguimiento de la conversación
-|   │   ├── emotion_handler.py                       # Ajusta el flujo de la conversación según el estado emocional
-|   │   ├── intent_recognizer.py                     # Reconoce la intención del usuario usando PLN
-|   │   └── dialog_flow.py                           # Flujo de diálogo basado en estado e intenciones
-|   │
-|   └── interaction_flow.py                          # Lógica de interacción completa del asistente
+├── assistant_logic/                      # Módulo de interacción del asistente virtual
+│   ├── response_generator/               # Generador de respuestas basadas en IA
+│   │   ├── data/                         # Datos para el entrenamiento de modelos
+│   │   │   ├── respuestas.txt            # Dataset para el modelo de lenguaje
+│   │   │   └── intent_data.json          # Dataset para el modelo de intenciones
+│   │   ├── model/                        # Modelos entrenados
+│   │   │   ├── language_model/           # Modelo de lenguaje basado en GPT
+│   │   │   │   ├── config.json
+│   │   │   │   ├── pytorch_model.bin
+│   │   │   │   └── tokenizer.json
+│   │   │   └── intent_model.pkl          # Modelo de intenciones basado en SVM
+│   │   ├── language_model.py             # Modelo de lenguaje basado en redes neuronales
+│   │   ├── response_generator.py         # Congunta todas elj fucniconamiento de todas las clases
+│   │   ├── response_processor.py         # Procesador de respuestas, ajusta el tono y complejidad
+│   │   └── response_selector.py          # Selección de la mejor respuesta según el contexto y emoción
+│   │
+│   ├── dialog_manager/                   # Gestión de flujo y contexto de diálogo
+│   │   ├── context_manager.py            # Administra el contexto y seguimiento de la conversación
+│   │   ├── emotion_handler.py            # Ajusta el flujo de la conversación según el estado emocional
+│   │   ├── intent_recognizer.py          # Reconoce la intención del usuario usando PLN
+│   │   └── dialog_flow.py                # Flujo de diálogo basado en estados e intenciones
+│   │
+│   └── interaction_flow.py               # Lógica de interacción completa del asistente
 │
-├── gui/                               # Interfaz gráfica de usuario (GUI)
-│   ├── main_window.py                 # Ventana principal de la interfaz gráfica
-│   └── assets/                        # Imágenes, iconos u otros recursos para la GUI
+├── gui/                                  # Interfaz gráfica de usuario (GUI)
+│   ├── main_window.py                    # Ventana principal de la interfaz gráfica
+│   └── assets/                           # Imágenes, iconos u otros recursos para la GUI
 │
-├── utils/                             # Utilidades y helpers
-│   └── helpers.py                     # Funciones comunes o auxiliares
+├── utils/                                # Utilidades y helpers
+│   └── helpers.py                        # Funciones comunes o auxiliares
 │
-└── main.py                            # Punto de entrada para ejecutar el asistente completo
+└── main.py                               # Punto de entrada para ejecutar el asistente completo
